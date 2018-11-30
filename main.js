@@ -29,26 +29,20 @@ activateXray.addEventListener("click", function xRayHandlerFunction(){
     document.getElementById('xray').classList.add('enabled')
 })
 /*======================================activate all powers function=================================*/
-activateAllPowers.addEventListener("click", function activateAllPowerFunction(){
-    document.getElementById('flight').classList.remove('disabled')
-    document.getElementById('flight').classList.add('enabled')
-
-    document.getElementById('mindreading').classList.remove('disabled')
-    document.getElementById('mindreading').classList.add('enabled')
-
-    document.getElementById('xray').classList.remove('disabled')
-    document.getElementById('xray').classList.add('enabled')
+activateAllPowers.addEventListener("click", function activateAll(){
+        let activateAll = document.querySelectorAll("section");
+        for (let i = 0; i < activateAll.length; i++) {
+            activateAll[i].classList.remove('disabled')
+            activateAll[i].classList.add('enabled')
+    }
 })
-/*======================================Disable all powers function=================================*/
+// /*======================================Disable all powers function=================================*/
 disableAllPowers.addEventListener("click", function disableAllPowerFunction(){
-    document.getElementById('flight').classList.remove('enabled')
-    document.getElementById('flight').classList.add('disabled')
-
-    document.getElementById('mindreading').classList.remove('enabled')
-    document.getElementById('mindreading').classList.add('disabled')
-
-    document.getElementById('xray').classList.remove('enabled')
-    document.getElementById('xray').classList.add('disabled')
+    let disableAll = document.querySelectorAll('section');
+    for(let i = 0; i < disableAll.length; i++){
+        disableAll[i].classList.remove('enabled')
+        disableAll[i].classList.add('disabled')
+    }
 })
 
 
